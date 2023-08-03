@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Edit To do
+{% endblock title %}
+{% block content %}
+  
+<div class="sm:flex sm:items-center sm:justify-center p-5 ">
+    <div class="py-4">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h2>Are you sure you want to remove "{{ todo.todo }}"</h2>
+            <br>
+            <button type="submit" class="text-white bg-red-500 mt-4 w-[20rem] rounded-xl p-3">Delete To Do</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
